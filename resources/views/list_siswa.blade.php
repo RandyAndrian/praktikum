@@ -14,6 +14,8 @@
   <body>
       @include('includes.navbar')
       <div class="container">
+        <h1 class="display-4 mt-3">{{ $title }}</h1>
+        <p class="lead" class="mb-3">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
           <div class="col-md-12">
               <table id="table_siswa" class="display">
                   <thead>

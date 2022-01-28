@@ -12,17 +12,20 @@
     <title>List Data Siswa</title>
   </head>
   <body>
-      @include('includes.navbar')
-      <div class="container">
+
+   @include('include.navbar')
+
+
         <h1 class="display-4 mt-3">{{ $title }}</h1>
         <p class="lead" class="mb-3">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-          <div class="col-md-12">
+
               <table id="table_siswa" class="display">
                   <thead>
                       <tr>
                           <th scope="col">No</th>
                           <th scope="col">Nama</th>
                           <th scope="col">Lahir</th>
+                          <th scope="col">Hobby</th>
                           <th scope="col">Gender</th>
                           <th scope="col">Agama</th>
                           <th scope="col">Alamat</th>
@@ -37,6 +40,7 @@
                             <td>{{ $siswa->id }}</td>
                             <td>{{ $siswa->nama }}</td>
                             <td>{{ $siswa->lahir }}, {{ $siswa->tgl }}</td>
+                            <td>{{ $siswa->hobi }}</td>
                             <td>{{ $siswa->jk }}</td>
                             <td>{{ $siswa->agama }}</td>
                             <td>{{ $siswa->alamat }}</td>
@@ -51,9 +55,9 @@
                       @endforeach
                   </tbody>
               </table>
-          </div>
-          <button type="button" class="btn btn-primary">Tambah Siswa</button>
-      </div>
+
+          <a href="tambah" class="btn btn-primary">Tambah Siswa</a>
+
 
       	<script>
         $(document).ready( function () {

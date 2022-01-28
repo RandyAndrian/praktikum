@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BiodataController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('list', [BiodataController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('list', [BiodataController::class, 'index'])->name('list_siswa');
+Route::get('tambah', [BiodataController::class, 'create'])->name('tambah_siswa');
+Route::post('store', [BiodataController::class, 'store']);
 
 
 

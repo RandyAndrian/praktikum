@@ -11,7 +11,9 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    @include('includes.navbar')
+
+    @include('include.navbar')
+
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
           <h1 class="display-4">Biodata Siswa</h1>

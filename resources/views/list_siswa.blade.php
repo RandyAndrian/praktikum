@@ -15,10 +15,12 @@
 
    @include('include.navbar')
 
-
-        <h1 class="display-4 mt-3">{{ $title }}</h1>
+        <div class="container-fluid">
+        <h1 class=" mt-3">{{ $title }}</h1>
         <p class="lead" class="mb-3">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
 
+        <div class="container-fluid">
               <table id="table_siswa" class="display">
                   <thead>
                       <tr>
@@ -61,6 +63,7 @@
                       @endforeach
                   </tbody>
               </table>
+            </div>
 
           <a href="tambah" class="btn btn-primary mt-3 mx-3">Tambah Siswa</a>
 

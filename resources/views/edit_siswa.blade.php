@@ -41,13 +41,12 @@
           </div>
         </div>
     </nav>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid" >
-          <h1 class="display-5">Edit Biodata Siswa</h1>
-          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-        </div>
+    <div class="container">
+        <h1 class"display-4 mt-3">{{ $title }}</h1>
+        <p class="lead" class="mb-3">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
     </div>
-    <div class="container-fluid">
+
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <form action="{{ $route }}" method="POST">
@@ -95,9 +94,9 @@
                       <input type="text" class="form-control" id="hobi" placeholder="Hobby Anda" name="hobi" value="{{ $bio->hobi }}">
                     </div>
                     <div class="form-group">
-                      <label for="inputAddress2">Alamat</label>
-                      <input type="text" class="form-control" id="alamat" placeholder="Apartment, studio, or floor" name="alamat" value="{{ $bio->alamat }}">
-                    </div>
+                        <label for="alamat">Alamat</label>
+                       <textarea name="alamat" cols="149" rows="5">{{ $bio->alamat }}</textarea>
+                        </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="telp">Telp</label>

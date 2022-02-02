@@ -47,16 +47,22 @@
                             <td>{{ $siswa->telp }}</td>
                             <td>{{ $siswa->email }}</td>
                             <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                                <button type="button" class="btn btn-primary">Read</button>
+                                <td><form method="POST" action="{{ route('destroy-siswa',$siswa->id) }}">
+                                    <a button type="button" class="btn btn-warning" href="{{ route('edit-siswa',$siswa->id) }}">Edit</button></a>
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        <a button type="button" class="btn btn-primary" href="{{ route('show-bio',$siswa->id) }}">Lihat</button></a>
+                                    </form>
+                                </td>
+                              </tr>
                             </td>
                         </tr>
                       @endforeach
                   </tbody>
               </table>
 
-          <a href="tambah" class="btn btn-primary">Tambah Siswa</a>
+          <a href="tambah" class="btn btn-primary mt-3 mx-3">Tambah Siswa</a>
 
 
       	<script>

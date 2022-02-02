@@ -22,7 +22,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('list', [BiodataController::class, 'index'])->name('list_siswa');
 Route::get('tambah', [BiodataController::class, 'create'])->name('tambah_siswa');
 Route::post('store', [BiodataController::class, 'store']);
-
+Route::get('/edit/{id}', [BiodataController::class, 'edit'])->name('edit-siswa');
+Route::put('/update/{id}', [BiodataController::class, 'update'])->name('update-siswa');
+Route::delete('/delete/{id}', [BiodataController::class, 'destroy'])->name('destroy-siswa');
+Route::get('/bio/{id}', [BiodataController::class, 'show'])->name('show-bio');
 
 
 

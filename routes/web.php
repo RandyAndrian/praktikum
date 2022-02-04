@@ -33,4 +33,4 @@ Route::get('/bio/{id}', [BiodataController::class, 'show'])->name('show-bio');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/welcome', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

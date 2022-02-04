@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BiodataController;
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,7 @@ Route::get('/bio/{id}', [BiodataController::class, 'show'])->name('show-bio');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
